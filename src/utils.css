@@ -1,0 +1,148 @@
+@import url("style.css");
+:root {
+  --black: rgba(5, 0, 0, 1);
+  --cornell-red: rgba(164, 19, 21, 1);
+  --white-smoke: rgb(236, 236, 236);
+  --battleship-gray: rgb(190, 189, 189);
+  --ou-crimson: rgba(138, 25, 32, 1);
+}
+
+body {
+  padding: 0.5em;
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  background-color: var(--white-smoke);
+}
+
+.container-sm {
+  width: 100%;
+  max-height: 50vh;
+  height: 100%;
+}
+
+.wrapper-nav {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.wrapper-nav .nav-logo {
+  font-size: calc(var(--size-XXL) + 1.5em);
+  font-family: "Archivo Black", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.wrapper-nav .nav-links {
+  height: 40px;
+  margin-top: 0.7em;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+.wrapper-nav .nav-links .nav-hyperlinks {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+}
+.wrapper-nav .nav-links .nav-hyperlinks a {
+  font-size: var(--size-M);
+  font-family: "League Spartan", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  padding: 0.2em 0.7em;
+  text-decoration: none;
+  list-style-type: none;
+  color: var(--black);
+  border-radius: 0.3em;
+  border-left: 3px solid var(--black);
+  margin-right: 0.4em;
+  transition: 350ms ease, border-left 0ms, border-bottom 0ms;
+}
+.wrapper-nav .nav-links .nav-hyperlinks a:hover {
+  border-left: 3px solid var(--black);
+  border-bottom: 3px solid var(--black);
+  background: var(--battleship-gray);
+}
+
+#section-Two {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+#section-Two::before {
+  content: "";
+  position: absolute;
+  background-image: url("../img/img1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.9); /* Adjust the opacity as needed */
+  border-radius: 2em;
+}
+#section-Two .wrapper-main {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#section-Two .wrapper-main .wrapper-main-logo {
+  font-family: "Archivo black", system-ui;
+  font-weight: 500;
+  font-style: normal;
+  font-size: calc(var(--size-XXL) + 1.2em);
+  color: var(--black);
+  letter-spacing: 25px;
+  filter: invert(1.5);
+  -webkit-text-stroke: 2px var(--white-smoke);
+}
+#section-Two .wrapper-main .btn {
+  margin-top: 0.5em;
+  padding: 0.2em 1em;
+  color: var(--black);
+  font-family: "League Spartan", sans-serif;
+  font-size: var(--size-L);
+  font-weight: 1000;
+  border-radius: 0.6em;
+  background-color: white;
+  border: 3px solid var(--black);
+  box-shadow: 0 0 0.1em var(--black), inset 0 0 0.3em var(--black);
+  letter-spacing: 1px;
+}
+#section-Two .typo {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  right: 0%;
+  font-family: "Protest Guerrilla", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(var(--size-XXL) + 2em);
+}
+#section-Two .typo div {
+  color: white;
+  -webkit-text-stroke: 2px var(--black);
+}
+
+.typo-overlay {
+  width: 100%;
+  display: block;
+  font-family: "Shrikhand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: calc(var(--size-XXL) + 2em);
+  text-align: center;
+}
+.typo-overlay div {
+  color: white;
+  -webkit-text-stroke: 2.5px var(--black);
+}/*# sourceMappingURL=utils.css.map */
