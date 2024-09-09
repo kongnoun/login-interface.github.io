@@ -204,7 +204,7 @@ body {
 
 @media (max-width: 440px) {
   .wrapper-main .wrapper-nav .nav-logo {
-    font-size: calc(var(--size-XL));
+    font-size: calc(var(--size-L));
   }
   .wrapper-main .wrapper-nav .nav-links {
     height: 30px;
@@ -260,5 +260,5 @@ body {
 .typo-overlay {
   left: 0%;
   align-items: start;
-  font-size: calc(var(--size-XXL) - 0.5em);
+  font-size: calc(var(--size-XXL) - 1em);
 }/*# sourceMappingURL=utils.css.map */
