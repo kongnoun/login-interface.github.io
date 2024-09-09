@@ -209,7 +209,7 @@ body {
 #section-Two {
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 100%;
 
     &::before {
         content: '';
@@ -252,10 +252,10 @@ body {
 
 @media (max-width: 440px) {
 
-    .wrapper-main {
-        .wrapper-nav {
+    .wrapper-nav {
+
             .nav-logo {
-                font-size: calc(var(--size-L));
+                font-size: calc(var(--size-L) + 1em);
             }
             .nav-links {
                 height: 30px;
@@ -266,7 +266,7 @@ body {
                     a {
                         font-size: var(--size-S);
                         padding: 0.2em 0.5em;
-                        margin-right: 0;
+                        margin-right: 0.4em;
                     }
 
                     a:nth-child(1) {
@@ -277,11 +277,11 @@ body {
 
         }
         .typo {
-            font-size: 1em;
+            font-size: 1.3em;
             margin-top: 0;
         }
     }
-}
+
 
 #section-Two {
     position: relative;
