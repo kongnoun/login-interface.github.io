@@ -12,7 +12,7 @@ body {
   max-width: 100vw;
   width: 100%;
   height: 100%;
-  background-color: var(--white-smoke);
+  background-color: var(--battleship-gray);
 }
 
 .container-sm {
@@ -96,18 +96,30 @@ body {
   align-items: center;
 }
 #section-Two .wrapper-main .wrapper-main-logo {
+  position: relative;
   font-family: "Archivo black", system-ui;
   font-weight: 500;
   font-style: normal;
-  font-size: calc(var(--size-XXL) + 1.2em);
+  font-size: calc(var(--size-XXL) + 1.4em);
   color: var(--black);
   letter-spacing: 25px;
   filter: invert(1.5);
   -webkit-text-stroke: 2px var(--white-smoke);
 }
+#section-Two .wrapper-main .wrapper-main-logo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 36, 255, 0.5); /* Adjust the alpha value for transparency */
+  z-index: -1; /* Ensure the backdrop is behind the text */
+  padding: 0.2em 0.5em;
+}
 #section-Two .wrapper-main .btn {
   margin-top: 0.5em;
-  padding: 0.2em 1em;
+  padding: 0.2em 1.4em;
   color: var(--black);
   font-family: "League Spartan", sans-serif;
   font-size: var(--size-L);
@@ -115,8 +127,13 @@ body {
   border-radius: 0.6em;
   background-color: white;
   border: 3px solid var(--black);
-  box-shadow: 0 0 0.1em var(--black), inset 0 0 0.3em var(--black);
+  box-shadow: 0 0 0.1em var(--black);
   letter-spacing: 1px;
+  transition: 350ms ease;
+}
+#section-Two .wrapper-main .btn:hover {
+  filter: hue-rotate(1);
+  transform: scale(1.05);
 }
 #section-Two .typo {
   display: inline-block;
@@ -249,7 +266,7 @@ body {
   border-radius: 2em;
 }
 #section-Two .wrapper-main .wrapper-main-logo {
-  font-size: calc(var(--size-XL));
+  font-size: calc(var(--size-XL) + 0.15em);
   letter-spacing: 2px;
 }
 #section-Two .wrapper-main .btn {
