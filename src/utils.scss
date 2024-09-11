@@ -124,7 +124,9 @@ body {
                 color: var(--black);
                 letter-spacing: 25px;
                 filter: invert(1.5);
+                padding: 0.2em 0.4em;
                 -webkit-text-stroke: 2px var(--white-smoke);
+                
             }
             
             .wrapper-main-logo::after {
@@ -134,9 +136,9 @@ body {
                 left: 0;
                 width: 100%;
                 height: 100%;
-                background-color: rgba(36, 36, 255, 0.5); /* Adjust the alpha value for transparency */
+                background-color: rgba(255, 249, 249, 0.5); /* Adjust the alpha value for transparency */
                 z-index: -1; /* Ensure the backdrop is behind the text */
-                padding: 0.2em 0.5em;
+                border-radius: 0.4em;
             }
             
 
