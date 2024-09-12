@@ -15,7 +15,7 @@ body {
   background-color: var(--battleship-gray);
 }
 
-.container-sm {
+.container {
   width: 100%;
   max-height: 50vh;
   height: 100%;
@@ -83,7 +83,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  filter: brightness(0.9); /* Adjust the opacity as needed */
+  filter: brightness(0.8); /* Adjust the opacity as needed */
   border-radius: 2em;
 }
 #section-Two .wrapper-main {
@@ -94,6 +94,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 #section-Two .wrapper-main .wrapper-main-logo {
   position: relative;
@@ -101,11 +102,10 @@ body {
   font-weight: 500;
   font-style: normal;
   font-size: calc(var(--size-XXL) + 1.4em);
-  color: var(--black);
-  letter-spacing: 25px;
-  filter: invert(1.5);
-  padding: 0.2em 0.4em;
-  -webkit-text-stroke: 2px var(--white-smoke);
+  color: var(--white-smoke);
+  letter-spacing: 10px;
+  padding: 0.1em 0.2em;
+  -webkit-text-stroke: 2px var(--black);
 }
 #section-Two .wrapper-main .wrapper-main-logo::after {
   content: "";
@@ -144,7 +144,7 @@ body {
   font-family: "Protest Guerrilla", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: calc(var(--size-XXL) + 2em);
+  font-size: calc(var(--size-XXL) + 1.5em);
 }
 #section-Two .typo div {
   color: white;
@@ -162,13 +162,43 @@ body {
 }
 .typo-overlay div {
   color: white;
-  -webkit-text-stroke: 2.5px var(--black);
+  -webkit-text-stroke: 2px var(--black);
+}
+
+#section-Three {
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  align-items: center;
+}
+#section-Three .wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+#section-Three .wrapper .full_card {
+  width: 380px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--battleship-gray);
+}
+#section-Three .wrapper .full_card .card_Front,
+#section-Three .wrapper .full_card .card_Back {
+  width: 100%;
+  height: 100%;
+  border-radius: 1em;
 }
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 764px) {
   .wrapper-nav .nav-logo {
-    font-size: calc(var(--size-XL) + 2.3em);
+    font-size: calc(var(--size-XL) + 2.1em);
   }
   .wrapper-nav .nav-links {
     align-items: start;
@@ -236,9 +266,6 @@ body {
     padding: 0.2em 0.5em;
     margin-right: 0.4em;
   }
-  .wrapper-nav .nav-links .nav-hyperlinks a:nth-child(1) {
-    padding-left: 0;
-  }
   .typo {
     font-size: 1.3em;
     margin-top: 0;
@@ -248,8 +275,6 @@ body {
   position: relative;
   width: 100%;
   height: 100vh;
-  margin-left: 0.05em !important;
-  margin-right: 0.1em !important;
   overflow: hidden;
 }
 #section-Two::before {
@@ -261,6 +286,7 @@ body {
   background-size: cover;
   top: 0;
   left: 0;
+  margin-left: auto;
   width: 100%;
   height: 100%;
   filter: brightness(0.9); /* Adjust the opacity as needed */

@@ -17,7 +17,7 @@ body {
 
 }
 
-.container-sm {
+.container {
     width: 100%;
     max-height: 50vh;
     height: 100%;
@@ -89,6 +89,7 @@ body {
         width: 100%;
         height: 30vh;
 
+
         &::before {
             content: '';
             position: absolute;
@@ -100,7 +101,7 @@ body {
             left: 0;
             width: 100%;
             height: 100%;
-            filter: brightness(0.9); /* Adjust the opacity as needed */
+            filter: brightness(0.8); /* Adjust the opacity as needed */
         
             border-radius: 2em;
         }
@@ -114,6 +115,8 @@ body {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+
+            overflow: hidden;
             
             .wrapper-main-logo {
                 position: relative;
@@ -121,11 +124,10 @@ body {
                 font-weight: 500;
                 font-style: normal;
                 font-size: calc(var(--size-XXL) + 1.4em);
-                color: var(--black);
-                letter-spacing: 25px;
-                filter: invert(1.5);
-                padding: 0.2em 0.4em;
-                -webkit-text-stroke: 2px var(--white-smoke);
+                color: var(--white-smoke);
+                letter-spacing: 10px;
+                padding: 0.1em 0.2em;
+                -webkit-text-stroke: 2px var(--black);
                 
             }
             
@@ -177,7 +179,7 @@ body {
             font-family: "Protest Guerrilla", sans-serif;
             font-weight: 400;
             font-style: normal;
-            font-size: calc(var(--size-XXL) + 2em);
+            font-size: calc(var(--size-XXL) + 1.5em);
             
             div {
                 color: white;
@@ -199,9 +201,54 @@ body {
     
     div {
         color: white;
-        -webkit-text-stroke: 2.5px var(--black);
+        -webkit-text-stroke: 2px var(--black);
     }
 }
+
+
+
+#section-Three {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+
+
+    align-items: center;
+
+    .wrapper {
+        width: 100%;
+
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        gap: 25px;
+
+
+        .full_card  {
+            width: 380px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: var(--battleship-gray);
+
+
+            .card_Front, 
+            .card_Back {
+                width: 100%;
+                height: 100%;
+                border-radius: 1em;
+
+                
+            }
+        }
+    }
+}
+
+
 
 /* Media Queries for responsiveness */
 @media screen and (max-width: 764px) {
@@ -209,7 +256,7 @@ body {
 
     .wrapper-nav {
         .nav-logo {
-            font-size: calc(var(--size-XL) + 2.3em);
+            font-size: calc(var(--size-XL) + 2.1em);
         }
         .nav-links {
             align-items: start;
@@ -232,6 +279,7 @@ body {
     width: 100%;
     height: 100%;
 
+
     &::before {
         content: '';
         position: absolute;
@@ -243,6 +291,7 @@ body {
         left: 0;
         width: 100%;
         height: 100%;
+
         filter: brightness(0.9); /* Adjust the opacity as needed */
     
         border-radius: 2em;
@@ -289,10 +338,6 @@ body {
                         padding: 0.2em 0.5em;
                         margin-right: 0.4em;
                     }
-
-                    a:nth-child(1) {
-                        padding-left: 0;
-                    }
                 }
             }
 
@@ -308,8 +353,6 @@ body {
     position: relative;
     width: 100%;
     height: 100vh;
-    margin-left: 0.05em !important;
-    margin-right: 0.1em !important;
 
     overflow: hidden;
 
@@ -322,6 +365,7 @@ body {
         background-size: cover;
         top: 0;
         left: 0;
+        margin-left: auto;
         width: 100%;
         height: 100%;
         filter: brightness(0.9); /* Adjust the opacity as needed */
