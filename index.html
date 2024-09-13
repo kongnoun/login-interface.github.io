@@ -40,8 +40,8 @@
         <div class="wrapper-main">
             <div class="wrapper-main-logo">-EVANGALION-</div>
             <!-- <div class="wrapper-main-info">Widely considered one of the greatest anime series of all time. Its final two episodes drew controversy, as many viewers found the ending confusing and abstract.</div> -->
-            <button class="btn">Suggest</button>
-
+            <button class="btn" onclick="displayLoginform()" id="suggest-El">Suggest</button>
+    
             <div class="typo" id="typotext">
                 <div class="overly-typo">E</div>
                 <div class="overly-typo">V</div>
@@ -51,7 +51,23 @@
                 <div class="overly-typo">0</div>
             </div>
         </div>
+    
+        <div class="wrapper-form" id="loginForm" style="display: none;">
+            <fieldset class="login-form">
+                <form>
+                    <img src="img/evangelionLogo.gif" alt="form logo">
+                    <label for="username">Email:</label>
+                    <input type="text" id="username" required placeholder="Enter your email">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" required placeholder="Enter your password">
+                    <label for="suggest">Suggestion?</label>
+                    <input class="suggestion" type="text" id="suggest">
+                    <button class="btn">Submit</button>
+                </form>
+            </fieldset>
+        </div>
     </section>
+    
 
     <span class="typo-overlay" style="margin-top: 0.5em;">
         
@@ -72,8 +88,8 @@
                     <p>Hover over to see the character background</p>
                 </div>
                 <div class="card_Back">
-                    <p>
-                        Shinji Ikari (碇シンジ, Ikari Shinji?)[2] is the Third Child, the main protagonist of the Neon Genesis Evangelion franchise, and the designated pilot of Evangelion Unit-01.
+                    <p style="color: white; background-color: black; padding: 0.2em;">
+                        Shinji Ikari (碇シンジ, Ikari Shinji?)[2] is the Third Child, the main protagonist of the Neon Genesis Evangelion franchise.
                     </p>
                 </div>
             </div>
@@ -84,7 +100,11 @@
                     <h2>Rei Ayanami  綾波 レイ</h2>
                     <p>Hover over to see the character background</p>
                 </div>
-                <div class="card_Back">Back</div>
+                <div class="card_Back">
+                    <p style="color: white; background-color: black; padding: 0.2em;">
+                        Rei Ayanami (綾波 レイあやなみ れい/アヤナミ レイ), Ayanami Rei? is a fictional character from the Neon Genesis Evangelion franchise.
+                    </p>
+                </div>
             </div>
 
             <div class="full_card">
@@ -94,7 +114,11 @@
                     <p>Hover over to see the character background</p>
 
                 </div>
-                <div class="card_Back">Back</div>
+                <div class="card_Back">
+                    <p style="color: white; background-color: black; padding: 0.2em;">
+                        Asuka Langley Sohryu (ラングレー, Sōryū Asuka Rangurē?) is a 14-year-old fictional character and one of the main female characters.
+                    </p>
+                </div>
             </div>
 
             <div class="full_card">
@@ -103,7 +127,11 @@
                     <h2>Kaworu Nagisa 渚 カヲル</h2>
                     <p>Hover over to see the character background</p>
                 </div>
-                <div class="card_Back">Back</div>
+                <div class="card_Back">
+                    <p style="color: white; background-color: black; padding: 0.2em;">
+                        Kaworu Nagisa (渚 カヲル, Nagisa Kaworu?), He is the Fifth Child and the seventeenth Angel. He is preceded by Armisael.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
@@ -111,8 +139,9 @@
 
     <section class="container" id="section-Four">
         <div class="typing-effect">
-            新世紀エヴァンゲリオン
+            Neon Genesis : 新世紀エヴァンゲリオン
         </div>
+        <img  class="image-effect" src="img/evas001.png" alt="">
         <div class="wrapper-reactive-cube">
             <div class="reactive-cube"></div>
             <div class="reactive-cube"></div>
@@ -468,7 +497,7 @@
 
         console.log('working..')
 
-
+        /*
         document.querySelectorAll('.reactive-cube').forEach(cube => {
             cube.addEventListener('mouseover', function() {
                 const index = Array.from(cube.parentNode.children).indexOf(cube);
@@ -497,6 +526,7 @@
                 });
             });
         });
+        */
 
     document.addEventListener('DOMContentLoaded', function() {
         const cubes = document.querySelectorAll('.reactive-cube');
@@ -508,6 +538,37 @@
             cube.style.animation = `hoverAnimation ${animationDuration}s infinite ${delay}s`;
         });
     });
+
+        function displayLoginform() {
+        const loginForm = document.getElementById('loginForm');
+        if (loginForm.classList.contains('show')) {
+            loginForm.classList.remove('show');
+            setTimeout(() => {
+                loginForm.style.display = 'none';
+            }, 500); // Match the transition duration
+        } else {
+            loginForm.style.display = 'block';
+            setTimeout(() => {
+                loginForm.classList.add('show');
+            }, 10); // Small delay to ensure the display property is set before adding the class
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        const loginForm = document.getElementById('loginForm');
+        const suggestButton = document.getElementById('suggest-El');
+        if (loginForm.classList.contains('show') && !loginForm.contains(event.target) && event.target !== suggestButton) {
+            loginForm.classList.remove('show');
+            setTimeout(() => {
+                loginForm.style.display = 'none';
+            }, 500); // Match the transition duration
+        }
+    });
+
+
+
+
+
 
     </script>
 </body>

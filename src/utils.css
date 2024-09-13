@@ -142,7 +142,7 @@ body {
   font-size: var(--size-M);
   transform: scale(1.1);
 }
-#section-Two .typo {
+#section-Two .wrapper-main .typo {
   display: inline-block;
   position: absolute;
   z-index: 1;
@@ -153,9 +153,56 @@ body {
   font-size: calc(var(--size-XL) + 0.3em);
   margin-right: 0.1em;
 }
-#section-Two .typo div {
+#section-Two .wrapper-main .typo div {
   color: white;
   -webkit-text-stroke: 2px var(--black);
+}
+#section-Two .wrapper-form {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  top: 20%;
+  left: 25%;
+}
+#section-Two .wrapper-form .login-form {
+  font-family: "League Spartan", sans-serif;
+  width: 380px;
+  height: 450px;
+  background-color: var(--battleship-gray);
+  border-radius: 1em;
+}
+#section-Two .wrapper-form .login-form form {
+  padding: 1em 2em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#section-Two .wrapper-form .login-form form label {
+  text-align: start;
+}
+#section-Two .wrapper-form .login-form form input {
+  border-radius: 0.35em;
+  padding: 0.3em 0.4em;
+}
+#section-Two .wrapper-form .login-form form .btn {
+  width: 110px;
+  height: 40px;
+  margin-top: 0.5em;
+  color: var(--black);
+  font-family: "League Spartan", sans-serif;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 0.6em;
+  background-color: white;
+  border: 3px solid var(--black);
+  box-shadow: 0 0 0.1em var(--black);
+  letter-spacing: 1px;
+  transition: all 200ms ease;
+}
+#section-Two .wrapper-form .login-form form .btn:hover {
+  font-size: var(--size-M);
+  transform: scale(1.02);
 }
 
 .typo-overlay {
@@ -192,12 +239,14 @@ body {
 #section-Three {
   width: 100%;
   height: 100%;
-  padding: 0.7em 1em;
+  padding: 0.7em 0.3em;
   border-top-left-radius: 2em;
   border-bottom-right-radius: 2em;
+  background-color: var(--battleship-gray);
   border: 4px solid var(--black);
   justify-content: center;
   align-items: center;
+  animation: hoverAnimation 13s ease-in-out infinite;
 }
 #section-Three .flip_card {
   width: 100%;
@@ -206,15 +255,15 @@ body {
   grid-template-rows: repeat(2, 1fr);
   justify-content: center;
   align-items: center;
-  gap: 12px;
+  gap: 5px;
   /* Reduce the gap between columns */
 }
 #section-Three .flip_card .full_card {
   width: 100%;
   /* Use full width within the container */
-  max-width: 270px;
+  max-width: 300px;
   /* Limit the maximum width */
-  height: 300px;
+  height: 270px;
   position: relative;
   display: flex;
   justify-content: center;
@@ -309,17 +358,25 @@ body {
 }
 #section-Four .typing-effect {
   position: absolute;
-  font-size: 3.5em;
+  font-size: 3.3em;
   color: var(--white-smoke);
   font-family: "Archivo black", system-ui;
   font-weight: bold;
   font-style: italic;
   align-self: center;
   bottom: 25%;
-  left: 10%;
+  left: 5%;
   -webkit-text-stroke: 1px black;
   z-index: 10;
   animation: hovertextAnimation 12s linear infinite;
+}
+#section-Four .image-effect {
+  position: absolute;
+  width: 270px;
+  height: 400px;
+  right: 7%;
+  bottom: 0%;
+  z-index: 9;
 }
 #section-Four .wrapper-reactive-cube {
   height: 100%;
