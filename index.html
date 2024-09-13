@@ -41,7 +41,6 @@
             <div class="wrapper-main-logo">-EVANGALION-</div>
             <!-- <div class="wrapper-main-info">Widely considered one of the greatest anime series of all time. Its final two episodes drew controversy, as many viewers found the ending confusing and abstract.</div> -->
             <button class="btn" onclick="displayLoginform()" id="suggest-El">Suggest</button>
-    
             <div class="typo" id="typotext">
                 <div class="overly-typo">E</div>
                 <div class="overly-typo">V</div>
@@ -50,22 +49,22 @@
                 <div class="overly-typo">0</div>
                 <div class="overly-typo">0</div>
             </div>
+            <div class="wrapper-form" id="loginForm" style="display: none;">
+                <fieldset class="login-form">
+                    <form>
+                        <img src="img/evangelionLogo.gif" alt="form logo">
+                        <label for="username">Email:</label>
+                        <input type="text" id="username" required placeholder="Enter your email">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" required placeholder="Enter your password">
+                        <label for="suggest">Suggestion?</label>
+                        <input class="suggestion" type="text" id="suggest">
+                        <button class="btn">Submit</button>
+                    </form>
+                </fieldset>
+            </div>
         </div>
-    
-        <div class="wrapper-form" id="loginForm" style="display: none;">
-            <fieldset class="login-form">
-                <form>
-                    <img src="img/evangelionLogo.gif" alt="form logo">
-                    <label for="username">Email:</label>
-                    <input type="text" id="username" required placeholder="Enter your email">
-                    <label for="password">Password:</label>
-                    <input type="password" id="password" required placeholder="Enter your password">
-                    <label for="suggest">Suggestion?</label>
-                    <input class="suggestion" type="text" id="suggest">
-                    <button class="btn">Submit</button>
-                </form>
-            </fieldset>
-        </div>
+
     </section>
     
 
@@ -539,7 +538,7 @@
         });
     });
 
-        function displayLoginform() {
+    function displayLoginform() {
         const loginForm = document.getElementById('loginForm');
         if (loginForm.classList.contains('show')) {
             loginForm.classList.remove('show');
@@ -564,6 +563,7 @@
             }, 500); // Match the transition duration
         }
     });
+
 
 
 

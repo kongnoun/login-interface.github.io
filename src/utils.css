@@ -162,30 +162,44 @@ body {
   width: 100%;
   height: 100%;
   z-index: 1000;
-  top: 20%;
-  left: 25%;
+  top: 0%;
+  left: 0%;
+  transform: translateX(-50%);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
-#section-Two .wrapper-form .login-form {
+#section-Two .wrapper-form.show {
+  display: block;
+  opacity: 1;
+  transform: translateX(0%);
+}
+#section-Two .login-form {
   font-family: "League Spartan", sans-serif;
-  width: 380px;
-  height: 450px;
+  font-weight: bold;
+  width: 20%;
+  height: 100%;
   background-color: var(--battleship-gray);
   border-radius: 1em;
 }
-#section-Two .wrapper-form .login-form form {
+#section-Two .login-form form {
   padding: 1em 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: start;
 }
-#section-Two .wrapper-form .login-form form label {
+#section-Two .login-form form img {
+  margin-left: 1em !important;
+  width: 60%;
+  height: 60%;
+}
+#section-Two .login-form form label {
   text-align: start;
 }
-#section-Two .wrapper-form .login-form form input {
+#section-Two .login-form form input {
   border-radius: 0.35em;
   padding: 0.3em 0.4em;
 }
-#section-Two .wrapper-form .login-form form .btn {
+#section-Two .login-form form .btn {
   width: 110px;
   height: 40px;
   margin-top: 0.5em;
@@ -200,7 +214,7 @@ body {
   letter-spacing: 1px;
   transition: all 200ms ease;
 }
-#section-Two .wrapper-form .login-form form .btn:hover {
+#section-Two .login-form form .btn:hover {
   font-size: var(--size-M);
   transform: scale(1.02);
 }
